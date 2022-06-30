@@ -1,0 +1,352 @@
+.form {
+	padding: 24px;
+	background: $white;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.08);
+	border-radius: 24px;
+	max-width: 1096px;
+	@media (max-width: $mobileSmall) {
+		margin: 0 15px;
+		padding: 20px 10px;
+	}
+
+	&_withBorder {
+		border: 1px solid #47749E;
+	}
+	&_delivery {
+		max-width: 560px;
+		margin-left: 0;
+		margin-right: 0;
+		.form__input-area {
+			grid-template-columns: 3fr 1.5fr;
+			gap: 10px;
+			@media (max-width: 600px) {
+				grid-template-columns: 1fr;
+			}
+		}
+		.form__double-input {
+			@media (max-width: 600px) {
+				grid-template-columns: 1fr;
+			}
+		}
+		.form__item {
+			border: none;
+			padding: 0;
+		}
+		.form__options {
+			grid-template-columns: repeat(2, minmax(50px, 100px));
+		}
+	}
+	.qs-datepicker-container {
+		@media (max-width: 768px) {
+			transform: translate(-35%, -10%);
+		}
+	}
+	&__input {
+		position: relative;
+	}
+	&__delivery {
+		display: grid;
+		grid-template-columns: 330px 330px;
+		column-gap: 95px;
+		margin-top: 56px;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr 1fr;
+			column-gap: 40px;
+		}
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			row-gap: 30px;
+			margin-top: 40px;
+		}
+	}
+	&__double-input {
+		display: grid;
+		grid-template-columns: auto auto;
+		gap: 15px;
+		margin-bottom: 28px;
+	}
+	&__calendar {
+		fill: #7C7D81;
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		bottom: 13px;
+		right: 15px;
+		pointer-events: none;
+	}
+	&__title {
+		display: block;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 24px;
+		color: #47749E;
+		margin-bottom: 18px;
+	}
+	&__options {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(165px, auto));
+		column-gap: 80px;
+		row-gap: 20px;
+	}
+	&__input-area {
+		display: grid;
+		grid-template-columns: 1fr 2.1fr 4fr 2fr 2.1fr;
+		column-gap: 17.5px;
+		row-gap: 15px;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+		}
+	}
+	&__input-group {
+		display: flex;
+		align-items: flex-end;
+		.form__input {
+			input {
+				border-radius: 0px;
+			}
+			&:not(:last-child) {
+				margin-right: 2px;
+			}
+			&:first-child {
+				input {
+					border-radius: 24px 0 0 24px;
+				}
+			}
+			&:last-child {
+				input, .select__title {
+					border-radius: 0 24px 24px 0;
+				}
+				.select._select-open .select__title {
+					border-radius: 0 24px 0 0;
+				}
+			}
+		}
+	}
+	&__label {
+		display: block;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 20px;
+		color: #7C7D81;
+		margin-bottom: 8px;
+		display: flex;
+	}
+    &__item {
+        position: relative;
+        transition: all $defaultTransition;
+		border-bottom: 1px solid #E8E8E8;
+		margin-bottom: 28px;
+		padding-bottom: 28px;
+		@media(max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+
+        &._error {
+            input {
+                border-color: $red;
+            }
+        }
+        &._focus {
+           	// input {
+			// 	border-color: $primary;
+		   	// }
+        }
+
+        input {
+            height: 48px;
+            width: 100%;
+            background: $white;
+            padding: 13px 13px 13px 20px;
+			border: 1px solid #BCBCBC;
+			border-radius: 24px;
+			font-weight: 700;
+			font-size: 16px;
+			line-height: 20px;
+			color: #25221D;
+
+			&:focus {
+				border-color: $primary;
+			}
+
+            @include placeholder-content {
+				font-weight: 400;
+                color: #BCBCBC;
+            }
+        }
+        &_textarea {
+
+            span {
+                //color: $light-grey;
+                display: block;
+                margin-bottom: rem(8);
+            }
+            &._focus {
+                textarea {
+                    //border-color: $primary1;
+                }
+            }
+
+        }
+        textarea {
+            width: 100%;
+            height: rem(160);
+            padding: rem(16);
+            background: transparent;
+            border-radius: rem(30);
+            border: 1px solid $grey;
+            color: $white;
+
+            @media(max-width: $mobile) {
+                height: rem(227);
+            }
+
+            @include placeholder-content {
+                color: $grey;
+            }
+        }
+    }
+	&__add {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		@media (max-width: $mobile) {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 20px;
+		}
+	}
+	&__add-btn {
+		img {
+			@media (min-width: $mobile) {
+				display: none;
+			}
+		}
+		span {
+			&:first-child {
+				font-weight: 700;
+				font-size: 18px;
+				line-height: 24px;
+				color: #47749E;
+				margin-right: 8px;
+			}
+			&:last-child {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 28px;
+				color: #343A40;
+			}
+		}
+		@media (max-width: $mobile) {
+			
+		}
+	}
+	&__total {
+		font-weight: 400;
+		font-size: 18px;
+		line-height: 28px;
+		color: #343A40;
+		@media (max-width: $mobile) {
+			background: #E6EDF0;
+			text-align: center;
+			padding: 6px 0;
+		}
+	}
+	&__checkboxes-title {
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 25px;
+		color: #343A40;
+		margin-bottom: 20px;
+		display: block;
+	}
+	&__checkboxes {
+		.checkbox {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+    .item-action {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+    // * ERROR
+    &__error {
+        color: $red;
+        position: absolute;
+        top: 110%;
+        font-size: rem(12);
+    }
+}
+
+.form-quote {
+	max-width: 984px;
+	box-shadow: none;
+	margin: 0 auto;
+	padding: 0;
+	&:last-child {
+		margin: 80px auto 80px auto;
+	}
+	&__heading {
+		margin-bottom: 32px;
+
+		h2 {
+			text-align: center;
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 42px;
+			margin-bottom: 16px;
+		}
+		p {
+			text-align: center;
+			font-weight: 400;
+			font-size: 16px;
+			line-height: 25px;
+		}
+	}
+	&__group {
+		display: grid;
+		grid-template-columns: 400px 1fr;
+		gap: 28px;
+		@media (max-width: $tablet) {
+			grid-template-columns: 1fr;
+			margin-bottom: 28px;
+			.form__double-input {
+				margin: 0;
+			}
+		}
+	}
+	&__controls {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.form__options {
+			grid-template-columns: 165px auto;
+			gap: 0;
+		}
+	}
+	.form__input-area {
+		grid-template-columns: 3fr 1.5fr;
+		gap: 10px;
+	
+		@media (max-width: 600px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	.form__item {
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	.item-action {
+		margin-top: 42px;
+	}
+}
+
+@import "checkbox";
+@import "select";
+// @import "quantity";
+@import "radio";
+// @import "rating";

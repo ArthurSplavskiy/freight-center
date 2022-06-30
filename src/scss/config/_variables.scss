@@ -1,0 +1,62 @@
+@function rem($px) {
+	$result: math.div($px, 16) + rem;
+	@return $result;
+}
+@function em($px, $current: 16) {
+	$result: math.div($px, $current) + em;
+	@return $result;
+}
+
+// * * * Default font
+$defaultFontFamily: "Sarabun", Arial, Helvetica, sans-serif;
+$secondFontFamily: Arial, Helvetica, sans-serif;
+
+$fontSize: rem(16); // где 16(px) - размер шрифта по умолчанию из макета
+
+// * * * Settings
+// * Page minimal width
+$minWidth: 320;
+// * Frame width (maket)
+$maxWidth: 1440;
+// * Page container width (0 = without container)
+$maxWidthContainer: 1320;
+$maxWidthContainerPX: 1320px;
+// * Container padding
+// (30 = 15px left and right, 0 = without padding)
+$containerPadding: 30;
+$containerPaddingPX: 30px;
+// * Adaptive type:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+// Ширина страбатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding; // 1256
+// * Breakpoinds
+$fullHd: em(1920);
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+// * * * Colors
+// * Main text color
+$white: #FFF;
+$black: #000;
+$primary: #F8700D;
+$blue: #47749E;
+$grey: #E6EDF0;
+$green: #00B67A;
+$red: #EA3C24;
+
+
+// * Blur
+$blurValue: 69px;
+
+// * trabsition
+$defaultTransition: 0.4s ease;
+
+// * z-indexes
+$z-indexes: (
+  'page-menu',
+  'header',
+  'wrapper'
+);

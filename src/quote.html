@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+		"title":"FREIGHT CENTER"
+	})
+	<body>
+		@@include('html/_preloader-markup.htm',{})
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_quote">
+				<section class="paralax-box">
+					<div class="paralax-box__image-ibg">
+						<img data-src="img/parallax-1.jpeg" data-lazy alt="Freight Center">
+					</div>
+					<div class="paralax-box__container">
+						<div class="paralax-box__content">
+							<div class="page-heading page-heading_center">
+								<h1>Freight shipping quick quote form</h1>
+								<p>Fill out the from below to receive your instant freight rate</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="page__content">
+					<form action="#" class="form">
+						<fieldset class="form__item">
+							<h3 class="form__title">Shipment time</h3>
+							<div class="form__options options">
+								<label class="options__item">
+									<input hidden class="options__input" checked type="radio" value="1" name="option">
+									<span class="options__text">
+										<div class="options__tip">
+											<span>LTL (Less-Than-Truckload)</span>
+											<div class="tip">
+												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+												<div class="tip__content">
+													LTL (Less-Than-Truckload)
+												</div>
+											</div>
+										</div>
+									</span>
+								</label>
+								<label  class="options__item">
+									<input hidden class="options__input" type="radio" value="2" name="option">
+									<span class="options__text">
+										<div class="options__tip">
+											<span>Full Truckload</span>
+											<div class="tip">
+												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+												<div class="tip__content">
+													Full Truckload
+												</div>
+											</div>
+										</div>
+									</span>
+								</label>
+								<label class="options__item">
+									<input hidden class="options__input" type="radio" value="2" name="option">
+									<span class="options__text">
+										<div class="options__tip">
+											<span>International shipment</span>
+											<div class="tip">
+												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+												<div class="tip__content">
+													International shipment
+												</div>
+											</div>
+										</div>
+									</span>
+								</label>
+							</div>
+						</fieldset>
+						<fieldset class="form__item">
+							<h3 class="form__title">Item description</h3>
+							<div class="form__input-area">
+								<div class="form__input">
+									<label class="form__label">Quantity</label>
+									<input type="text" name="quantity" placeholder="0">
+								</div>
+								<div class="form__input">
+									<label class="form__label">Packaging type</label>
+									<select name="form[]" class="form">
+										<option value="1" selected data-asset="img/interface/pallet-sel.png">Pallet</option>
+										<option value="2" data-asset="img/interface/box-sel.png">Box</option>
+										<option value="3" data-asset="img/interface/container-sel.png">Container</option>
+										<option value="4" data-asset="img/interface/drum-sel.png">Drum / Barrell</option>
+									</select>
+								</div>
+								<div class="form__input-group">
+									<div class="form__input">
+										<label class="form__label">Length</label>
+										<input type="text" name="length" value="1000">
+									</div>
+									<div class="form__input">
+										<label class="form__label">Width</label>
+										<input type="text" name="width" value="1000">
+									</div>
+									<div class="form__input">
+										<label class="form__label">Height</label>
+										<input type="text" name="height" value="1000">
+									</div>
+									<div class="form__input">
+										<select name="form[]" class="form">
+											<option value="1" selected>in</option>
+											<option value="2">feet</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__input-group">
+									<div class="form__input">
+										<label class="form__label">Width</label>
+										<input type="text" name="width" value="1000">
+									</div>
+									<div class="form__input">
+										<select name="form[]" class="form">
+											<option value="1" selected>lbs</option>
+											<option value="2">kg</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__input">
+									<label class="form__label">
+										<span>Freight class</span>
+										<div class="tip">
+											<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+											<div class="tip__content">
+												Freight class
+											</div>
+										</div>
+									</label>
+									<select name="form[]" class="form">
+										<option value="1" selected>I’m not sure</option>
+										<option value="2">Heavy class</option>
+										<option value="2">Middle class</option>
+										<option value="2">Light class</option>
+									</select>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="form__item">
+							<div class="form__add">
+								<button class="form__add-btn">
+									<img src="img/interface/add-mobile.svg" alt="">
+									<div>
+										<span>+ADD</span>
+										<span>Another Item</span>
+									</div>
+								</button>
+								<div class="form__total">
+									<span>Total shipment weight:</span>
+									<strong>0 LBS</strong>
+								</div>
+							</div>
+							<div class="form__delivery">
+								<div class="form__delivery-item">
+									<h3 class="form__title">Pickup location</h3>
+									<div class="form__double-input">
+										<div class="form__input">
+											<label class="form__label">ZIP / Postal code</label>
+											<input type="text" name="postal-code">
+										</div>
+										<div class="form__input">
+											<label class="form__label">
+												<span>Request pickup date</span>
+												<div class="tip">
+													<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+													<div class="tip__content">Request pickup date</div>
+												</div>
+											</label>
+											<input type="text" name="loading-date" value="14.01.2000" data-date-mask>
+											<img class="form__calendar" data-src="img/interface/calendar.svg" data-inline-svg="" alt="Loading date">
+										</div>
+									</div>
+									<div class="form__checkboxes">
+										<span class="form__checkboxes-title">Extra services at pickup</span>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Residental area</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Residental area</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Limited access area</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Limited access area</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" checked name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Lift gate at pickup</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Lift gate at pickup</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" checked name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Hazardous materials</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Hazardous materials</div>
+													</div>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form__delivery-item">
+									<h3 class="form__title">Delivery location</h3>
+									<div class="form__double-input">
+										<div class="form__input">
+											<label class="form__label">ZIP / Postal code</label>
+											<input type="text" name="postal-code">
+										</div>
+									</div>
+									<div class="form__checkboxes">
+										<span class="form__checkboxes-title">Extra services at delivery</span>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Residental area</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Residental area</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input type="checkbox" name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Limited access area</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Limited access area</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="checkbox__text">
+												<input checked type="checkbox" name="agreement" class="checkbox__input">
+												<div class="icon-check"></div>
+												<div class="checkbox__tip">
+													<span>Lift gate at pickup</span>
+													<div class="tip">
+														<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+														<div class="tip__content">Lift gate at pickup</div>
+													</div>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</fieldset>
+						<fieldset class="item-action">
+							<button class="button">Get Quote</button>
+						</fieldset>
+					</form>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+	</body>
+</html>
