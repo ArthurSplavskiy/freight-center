@@ -51,6 +51,9 @@
 		&:not(.footer-social) {
 			a {
 				@extend %underline-link;
+				&:before {
+					background: $white;
+				}
 			}
 		}
 	}
@@ -65,6 +68,9 @@
 	&:last-child {
 		& > a {
 			@extend %underline-link;
+			&:before {
+				background: $white;
+			}
 		}
 		@media (max-width: $mobileSmall) {
 			display: flex;
@@ -110,6 +116,9 @@
 			a {
 				@extend %underline-link;
 
+				&:before {
+					background: $white;
+				}
 				&:not(:last-child) {
 					margin-right: 30px;
 				}

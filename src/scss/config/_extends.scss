@@ -132,3 +132,10 @@
 		transform: scaleX(1);
 	}
 }
+%page-link {
+	color: #47749E;
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}

@@ -40,12 +40,18 @@ const clickOnDocument = (e) => {
 
 const setCopyrightYear = (el) => {
 	el ? el.innerHTML = `${new Date().getFullYear()}` : null;
-}
+};
+
+const playPreloaderAnimation = () => {
+	const $preloader = document.querySelector('.preloader');
+	$preloader && $preloader.classList.add('_animate');
+};
 
 const init = () => {
 	const $html = document.documentElement;
 	$html.classList.add('loaded');
 
+	playPreloaderAnimation();
 	spollers();
 	setCopyrightYear(document.querySelector('.js-copyright-year'));
 	formFieldsInit();

@@ -15,6 +15,18 @@
 			margin-top: -95px;
 		}
 	}
+	&_city {
+		.s-map__text h3 {
+			color: #47749E;
+		}
+	}
+	&_worldwide {
+		.reviews {
+			&:not(:first-child) {
+				padding-top: 0;
+			}
+		}
+	}
 }
 
 .home-hero {
@@ -260,7 +272,6 @@
 		margin-bottom: 32px;
 		color: $white;
 	}
-
 	&__info {
 		font-weight: 400;
 		font-size: 14px;
@@ -271,7 +282,6 @@
 		gap: 8px;
 		align-items: center;
 	}
-	
 	&__form {
 		display: grid;
 		grid-template-columns: repeat(4, 170px);

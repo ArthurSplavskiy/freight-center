@@ -35,6 +35,16 @@
 		.form__options {
 			grid-template-columns: repeat(2, minmax(50px, 100px));
 		}
+		.select {
+			max-width: 247px;
+			.select__content {
+				font-weight: 400;
+				color: #BCBCBC;
+			}
+			@media (max-width: 600px) {
+				max-width: 100%;
+			}
+		}
 	}
 	.qs-datepicker-container {
 		@media (max-width: 768px) {

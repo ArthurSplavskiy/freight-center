@@ -31,6 +31,7 @@ $containerPaddingPX: 30px;
 $responsiveType: 1;
 // Ширина страбатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding; // 1256
+$containerWidthPX: $maxWidthContainer + $containerPadding + px; // 1256
 // * Breakpoinds
 $fullHd: em(1920);
 $pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
