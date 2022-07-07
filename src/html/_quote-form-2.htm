@@ -1,0 +1,82 @@
+<form action="#" class="form form-quote" data-message=".popup-reset" data-test>
+	<fieldset class="form-quote__heading">
+		<h2>Instant Truckload Rates</h2>
+	</fieldset>
+	<div class="form-quote__group">
+		<fieldset class="form__item">
+			<h3 class="form__title">Pickup/delivery information</h3>
+			<div class="form__double-input">
+				<div class="form__input">
+					<label class="form__label">Pickup Postal code</label>
+					<input type="text" name="postal-code-pickup" placeholder="_______________" data-required>
+				</div>
+				<div class="form__input">
+					<label class="form__label">Destination Postal code</label>
+					<input type="text" name="postal-code-destination" placeholder="_______________" data-required>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="form__item">
+			<h3 class="form__title">Shipment information</h3>
+			<div class="form__input-area">
+				<div class="form__input-group">
+					<div class="form__input">
+						<label class="form__label">Length</label>
+						<input type="text" name="length" value="1000" data-required>
+					</div>
+					<div class="form__input">
+						<label class="form__label">Width</label>
+						<input type="text" name="width" value="1000" data-required>
+					</div>
+					<div class="form__input">
+						<label class="form__label">Height</label>
+						<input type="text" name="height" value="1000" data-required>
+					</div>
+					<div class="form__input">
+						<select name="form[]" class="form">
+							<option value="1" selected>in</option>
+							<option value="2">feet</option>
+						</select>
+					</div>
+				</div>
+				<div class="form__input-group">
+					<div class="form__input">
+						<label class="form__label">Width</label>
+						<input type="text" name="width" value="1000" data-required>
+					</div>
+					<div class="form__input">
+						<select name="form[]" class="form">
+							<option value="1" selected>lbs</option>
+							<option value="2">kg</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</div>
+	<div class="form-quote__controls">
+		<fieldset class="form__item" data-showclass-option>
+			<h3 class="form__title">Do you know the freight class?</h3>
+			<div class="form__options options">
+				<label class="options__item">
+					<input hidden class="options__input" type="radio" value="1" name="option" data-showclass-option-yes>
+					<span class="options__text">Yes</span>
+				</label>
+				<label class="options__item">
+					<input checked hidden class="options__input" type="radio" value="2" name="option">
+					<span class="options__text">No</span>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset class="form__item" data-showclass>
+			<label class="form__label">Choose Freight Class</label>
+			<select name="form[]" class="form" data-required="select">
+				<option value="1" selected>Select</option>
+				<option value="2">Select 2</option>
+			</select>
+		</fieldset>
+		<fieldset class="item-action">
+			<button class="button">Get my Quote</button>
+		</fieldset>
+	</div>
+</form>

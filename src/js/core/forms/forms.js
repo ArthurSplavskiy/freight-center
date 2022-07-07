@@ -1,6 +1,7 @@
 // Импорт функционала ==============================================================================================================================================================================================================================================================================================================================
 // Вспомогательные функции
 import { _slideUp, _slideDown, _slideToggle, setPhoneMask, setDateMask } from "../utils/functions.js";
+import { popup } from "../../index.js";
 // Модуль попапа
 // import { popupItem } from "../utils/popups.js";
 // Модуль прокрутки к блоку
@@ -70,7 +71,11 @@ export let formValidate = {
 				if (formRequiredItem.offsetParent !== null) {
 					error += this.validateInput(formRequiredItem);
 				}
-
+				if (formRequiredItem.parentElement.classList.contains('select')) {
+					if (formRequiredItem.parentElement.offsetParent !== null) {
+						error += this.validateInput(formRequiredItem);
+					}
+				}
 			});
 		}
 		return error;
@@ -93,8 +98,7 @@ export let formValidate = {
 			this.addError(formRequiredItem);
 			error++;
 		} else if (formRequiredItem.dataset.required === "select") {
-			//formRequiredItem.value = formRequiredItem.value.replace(" ", "");
-			let selectDefault = formRequiredItem.querySelector('.select__option[hidden]')
+			let selectDefault = formRequiredItem.nextElementSibling.querySelector('.select__option[hidden]');
 
 			if(+selectDefault.dataset.value === 1) {
 				this.addError(formRequiredItem);
@@ -102,7 +106,7 @@ export let formValidate = {
 			} else {
 				this.removeError(formRequiredItem);
 			}
-		}  else if (formRequiredItem.dataset.required === "password") {
+		}   else if (formRequiredItem.dataset.required === "password") {
 			formRequiredItem.value = formRequiredItem.value.replace(" ", "");
 
 			if(!formRequiredItem.value) {
@@ -184,7 +188,6 @@ export let formValidate = {
 				const select = selects[index];
 				const select_default_value = select.getAttribute('data-default');
 				select.value = select_default_value;
-				select_item(select);
 			}
 		}
 		// float label
@@ -251,7 +254,7 @@ export function formSubmit(validate) {
 					form.classList.remove('_sending');
 					if (message) {
 						// Нужно подключить зависимость
-						popupItem.open(`${message}`);
+						popup.open(`${message}`);
 					}
 					formValidate.formClean(form);
 				} else {
@@ -264,17 +267,17 @@ export function formSubmit(validate) {
 				e.preventDefault();
 				if (message) {
 					// Нужно подключить зависимость
-					popupItem.open(`${message}`);
+					popup.open(`${message}`);
 				}
 				formValidate.formClean(form);
 			}
 		} else {
+			e.preventDefault();
 			const formError = form.querySelector('._error');
 			if (formError && form.hasAttribute('data-goto-error')) {
 				// Нужно подключить зависимость
 				gotoBlock(formError, 1000, 50);
 			}
-			e.preventDefault();
 		}
 	}
 }

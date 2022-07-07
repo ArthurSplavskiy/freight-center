@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('html/_head.htm',{
+		"title":"FREIGHT CENTER - Calculate your free Truckload freight rates now"
+	})
+	<body>
+		@@include('html/_preloader-markup.htm',{})
+		<div class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page page_calc">
+				<section class="paralax-box">
+					<div class="paralax-box__image-ibg">
+						<img data-src="img/parallax-1.jpeg" data-lazy alt="Freight Center">
+					</div>
+					<div class="paralax-box__container">
+						<div class="paralax-box__content">
+							<div class="page-heading">
+								<h1>Calculate your free Truckload freight rates now</h1>
+								<div class="page-heading__buttons">
+									<a href="#" class="button button_white">Click Here for LTL Freight Rates</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<nav class="breadcrumbs">
+					<div class="breadcrumbs__container">
+						<div class="breadcrumbs__content">
+							<ul class="breadcrumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+								<li itemscope itemtype="http://schema.org/ListItem">
+									<a class="breadcrumbs__link" itemprop="item" href="index.html">
+										<img src="img/interface/home.svg" alt="home">
+									</a>
+									<meta itemprop="position" content="1" />
+								</li>
+								<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+									<a class="breadcrumbs__link" itemprop="item" href="california.html">Camp</a>
+									<meta itemprop="position" content="2" />
+								</li>
+								<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+									<span class="breadcrumbs__link" itemprop="name">Truckload</span>
+									<meta itemprop="position" content="3" />
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+				<section class="s-delivery">
+					<div class="s-delivery__container">
+						<div class="s-delivery__content">
+							<div class="s-delivery__text">
+								<h2 class="s-delivery__title">Compare Freight Rates Instantly!</h2>
+								<p class="page-text">
+									The cheapest freight rates from all the top carriers are just a few steps away. Simply fill in a few short details about
+									your shipment and receive instant freight shipping rates from leading freight carriers in one easy place. Trust the
+									experts at FreightCenter to give you the best prices and options with for your freight shipping shipping needs.
+								</p>
+								<h2 class="s-delivery__title mt-24">Why Choose FreightCenter?</h2>
+								<ul class="s-textcontent__list">
+									<li><span>Compare freight rates from 50+ carriers</span></li>
+									<li><span>Instant freight shipping rates anytime</span></li>
+									<li><span>Shipping solutions to anywhere in the U.S. & Canada</span></li>
+									<li><span>Unbeatable discounts on your freight LTL, truckload, rail, air, and more</span></li>
+									<li><span>Automated tracking, paperwork & invoices</span></li>
+									<li><span>Manage all freight quotes & shipments in one place</span></li>
+									<li><span>30+ years of transportation experience working for you!</span></li>
+								</ul>
+							</div>
+							<div class="s-delivery__form">
+								@@include('html/_delivery-form.htm',{})
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			@@include('html/_footer.htm',{})
+			@@include('html/_logo.htm',{})
+			@@include('html/_popup.htm',{})
+			@@include('html/_js.htm',{})
+		</div>
+	</body>
+</html>

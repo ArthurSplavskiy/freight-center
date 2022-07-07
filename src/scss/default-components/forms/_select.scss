@@ -5,10 +5,15 @@
 		}
 		.select__title {
 			border-radius: 24px 24px 0 0;
-			border-color: $primary;
+			border-color: $blue;
 		}
 		.select__options {
-			border-color: $primary;
+			border-color: $blue;
+		}
+	}
+	&._error {
+		.select__title {
+			border-color: $red;
 		}
 	}
 }
@@ -16,6 +21,15 @@
 	position: relative;
 	line-height: 1;
 	
+	&_select_grey {
+		.select__content {
+			font-weight: 400;
+			color: #BCBCBC;
+		}
+	}
+	&__content {
+		font-weight: 700;
+	}
 	&__row {
 		display: grid;
 		grid-template-columns: 24px auto;

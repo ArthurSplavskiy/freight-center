@@ -50,7 +50,7 @@
 					<div class="s-delivery__container">
 						<div class="s-delivery__content">
 							<div class="s-delivery__text">
-								<h3 class="s-delivery__title">City-to-City Freight Shipping</h3>
+								<h2 class="s-delivery__title">City-to-City Freight Shipping</h2>
 								<p class="page-text">
 									FreightCenter provides dependable and affordable solutions for <a href="#">shipping freight</a> using <a href="#">intermodal freight</a>, <a href="#">LTL freight</a>,
 									<a href="#">truckload freight</a>, and <a href="#">rail freight</a>. Shipping freight from Anaheim to Milwaukee is now made easier than ever because of
@@ -60,81 +60,7 @@
 								</p>
 							</div>
 							<div class="s-delivery__form">
-								<form action="#" class="form form_delivery">
-									<fieldset class="form__item">
-										<h3 class="form__title">Pickup/delivery information</h3>
-										<div class="form__double-input">
-											<div class="form__input">
-												<label class="form__label">Pickup ZIP/Postal code</label>
-												<input type="text" name="postal-code-pickup">
-											</div>
-											<div class="form__input">
-												<label class="form__label">Destination ZIP/Postal code</label>
-												<input type="text" name="postal-code-destination">
-											</div>
-										</div>
-									</fieldset>
-									<fieldset class="form__item">
-										<h3 class="form__title">Shipment information</h3>
-										<div class="form__input-area">
-											<div class="form__input-group">
-												<div class="form__input">
-													<label class="form__label">Length</label>
-													<input type="text" name="length" value="1000">
-												</div>
-												<div class="form__input">
-													<label class="form__label">Width</label>
-													<input type="text" name="width" value="1000">
-												</div>
-												<div class="form__input">
-													<label class="form__label">Height</label>
-													<input type="text" name="height" value="1000">
-												</div>
-												<div class="form__input">
-													<select name="form[]" class="form">
-														<option value="1" selected>in</option>
-														<option value="2">feet</option>
-													</select>
-												</div>
-											</div>
-											<div class="form__input-group">
-												<div class="form__input">
-													<label class="form__label">Width</label>
-													<input type="text" name="width" value="1000">
-												</div>
-												<div class="form__input">
-													<select name="form[]" class="form">
-														<option value="1" selected>lbs</option>
-														<option value="2">kg</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</fieldset>
-									<fieldset class="form__item">
-										<h3 class="form__title">Do you know the freight class?</h3>
-										<div class="form__options options">
-											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="1" name="option">
-												<span class="options__text">Yes</span>
-											</label>
-											<label class="options__item">
-												<input checked hidden class="options__input" type="radio" value="2" name="option">
-												<span class="options__text">No</span>
-											</label>
-										</div>
-									</fieldset>
-									<fieldset class="form__item">
-										<label class="form__label">Choose Freight Class</label>
-										<select name="form[]" class="form">
-											<option value="1" selected>Select</option>
-											<option value="2">Select 2</option>
-										</select>
-									</fieldset>
-									<fieldset class="item-action">
-										<button class="button">View my rates</button>
-									</fieldset>
-								</form>
+								@@include('html/_delivery-form.htm', {})
 							</div>
 						</div>
 					</div>
@@ -180,7 +106,7 @@
 						<div class="s-nationwide__content">
 							<h2 class="s-nationwide__title">Nationwide Freight Shipping</h2>
 							<p class="page-text">Whether you're shipping freight from Anaheim to Milwaukee, or anywhere else, FreightCenter offers dependable
-							<a href="#"></a>cross-country freight shipping</a> and <a href="#">international freight shipping</a> at a great value.</p>
+							<a href="#">cross-country freight shipping</a> and <a href="#">international freight shipping</a> at a great value.</p>
 							<p class="page-text">Get an <a href="#">instant freight quote</a> from multiple freight carriers with just one search. Why search around for the <a href="#">cheapest
 							freight shipping</a> rates? Just use our instant <a href="#">freight quote tool</a>, or call <a href="#">800.716.7608</a> to get an instant quote from
 							hundreds of leading nationwide freight carriers.</p>
@@ -485,6 +411,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 			@@include('html/_logo.htm',{})
+			@@include('html/_popup.htm',{})
 			@@include('html/_js.htm',{})
 		</div>
 	</body>

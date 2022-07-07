@@ -6,6 +6,8 @@
 	}
 	// .options__item
 	&__item {
+		display: inline-flex;
+		align-items: center;
 		position: relative;
 		cursor: pointer;
 		&._error {

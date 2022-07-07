@@ -32,7 +32,7 @@
 				"logo . actions . burger"
 			;
 		}
-		@media (max-width: 374px) {
+		@media (max-width: $mobileSmall) {
 			grid-template-columns: [start] 120px 1fr auto 21px 26px [end];
 		}
 	}
@@ -46,7 +46,7 @@
 			@media (max-width: 1180px) {
 				max-width: 163px;
 			}
-			@media (max-width: 374px) {
+			@media (max-width: $mobileSmall) {
 				max-width: 120px;
 			}
 		}

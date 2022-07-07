@@ -8,9 +8,17 @@ import { isTarget, spollers, removeClasses, _slideUp, bodyLockStatus, bodyLockTo
 
 const $searchForm = document.querySelector('[data-search-form]')
 
+export const popup = {
+	open (selector) {
+		document.querySelector(selector).classList.add('_open');
+	},
+	close (e, selector) {
+		e.target.closest(selector).closest('.popup').classList.remove('_open');
+	}
+};
+
 const clickOnDocument = (e) => {
 	const targetElement = e.target;
-
 	
 	const $searchTrigger = isTarget(targetElement, '[data-search-trigger]')
 	const $searchClose = isTarget(targetElement, '[data-search-close]')
@@ -36,6 +44,17 @@ const clickOnDocument = (e) => {
 			$pageBurger.classList.toggle('js-open');
 		}
 	}
+
+	if(targetElement.closest('.popup__close')) {
+		popup.close(e, '.popup__close');
+	}
+	if(targetElement.closest('.popup') && !targetElement.closest('.popup__content')) {
+		popup.close(e, '.popup');
+	}
+	
+	if(targetElement.closest('[href="#"]')) {
+		e.preventDefault();
+	}
 };
 
 const setCopyrightYear = (el) => {
@@ -47,6 +66,37 @@ const playPreloaderAnimation = () => {
 	$preloader && $preloader.classList.add('_animate');
 };
 
+const showFormClass = () => {
+	const $showOption = document.querySelector('[data-showclass-option]');
+	const $showOptionInputs = $showOption && $showOption.querySelectorAll('input[type="radio"]')
+	const $showFormClass = $showOption && $showOption.nextElementSibling;
+
+	const hiddenSelect = () => {
+		if($showFormClass) {
+			$showFormClass.style.display = 'none';
+			$showFormClass.hidden = true;
+		}
+	}
+	const showSelect = () => {
+		if($showFormClass) {
+			$showFormClass.style.display = 'block';
+			$showFormClass.hidden = false;
+		}
+	}
+
+	hiddenSelect();
+
+	$showOptionInputs && $showOptionInputs.forEach(input => {
+		input.addEventListener('change', function() {
+			if(this.hasAttribute('data-showclass-option-yes') && this.checked) {
+				showSelect();
+			} else {
+				hiddenSelect();
+			}
+		})
+	})
+}
+
 const init = () => {
 	const $html = document.documentElement;
 	$html.classList.add('loaded');
@@ -57,6 +107,7 @@ const init = () => {
 	formFieldsInit();
 	formSubmit(true);
 	tabs();
+	showFormClass();
 	
 	document.addEventListener('click', clickOnDocument)
 };

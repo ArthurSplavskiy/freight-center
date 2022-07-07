@@ -89,8 +89,8 @@
 								<h2>Track your EFW Freight shipment</h2>
 								<p>If you've shipped with FreightCenter, you can track your <strong>Estes Forwarding Worldwide</strong>
 									shipment here</p>
-								<form action="#" class="shipment__form">
-									<input type="text" placeholder="Enter freight center shippment ID">
+								<form action="#" class="shipment__form" data-message=".popup-reset" data-test>
+									<input type="text" placeholder="Enter freight center shippment ID" data-required>
 									<button type="submit" class="button">Track</button>
 								</form>
 								<div class="shipment__agree">
@@ -103,7 +103,7 @@
 									<img src="img/statistics.png" alt="Elephant at sunset">
 									<figcaption>Compare <strong>EFW</strong> freight to 50+ carriers</figcaption>
 								</figure>
-								<a href="#" class="button button_outlined">Learn More</a>
+								<a href="#" class="button button_white button_outlined">Learn More</a>
 							</div>
 						</div>
 					</div>
@@ -173,6 +173,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 			@@include('html/_logo.htm',{})
+			@@include('html/_popup.htm',{})
 			@@include('html/_js.htm',{})
 		</div>
 	</body>

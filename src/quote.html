@@ -22,52 +22,46 @@
 					</div>
 				</section>
 				<div class="page__content">
-					<form action="#" class="form">
+					<form action="#" class="form" data-message=".popup-reset" data-test>
 						<fieldset class="form__item">
 							<h3 class="form__title">Shipment time</h3>
 							<div class="form__options options">
-								<label class="options__item">
-									<input hidden class="options__input" checked type="radio" value="1" name="option">
-									<span class="options__text">
-										<div class="options__tip">
-											<span>LTL (Less-Than-Truckload)</span>
-											<div class="tip">
-												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
-												<div class="tip__content">
-													LTL (Less-Than-Truckload)
-												</div>
-											</div>
+								<div class="options__item">
+									<label>
+										<input hidden class="options__input" checked type="radio" value="1" name="option">
+										<span class="options__text">LTL (Less-Than-Truckload)</span>
+									</label>
+									<div class="tip">
+										<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+										<div class="tip__content">
+											LTL (Less-Than-Truckload)
 										</div>
-									</span>
-								</label>
-								<label  class="options__item">
-									<input hidden class="options__input" type="radio" value="2" name="option">
-									<span class="options__text">
-										<div class="options__tip">
-											<span>Full Truckload</span>
-											<div class="tip">
-												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
-												<div class="tip__content">
-													Full Truckload
-												</div>
-											</div>
+									</div>
+								</div>
+								<div class="options__item">
+									<label>
+										<input hidden class="options__input" type="radio" value="2" name="option">
+										<span class="options__text">Full Truckload</span>
+									</label>
+									<div class="tip">
+										<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+										<div class="tip__content">
+											Full Truckload
 										</div>
-									</span>
-								</label>
-								<label class="options__item">
-									<input hidden class="options__input" type="radio" value="2" name="option">
-									<span class="options__text">
-										<div class="options__tip">
-											<span>International shipment</span>
-											<div class="tip">
-												<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
-												<div class="tip__content">
-													International shipment
-												</div>
-											</div>
+									</div>
+								</div>
+								<div class="options__item">
+									<label>
+										<input hidden class="options__input" type="radio" value="2" name="option">
+										<span class="options__text">International shipment</span>
+									</label>
+									<div class="tip">
+										<img class="tip__icon" src="img/interface/question-circle.svg" alt="tip">
+										<div class="tip__content">
+											International shipment
 										</div>
-									</span>
-								</label>
+									</div>
+								</div>
 							</div>
 						</fieldset>
 						<fieldset class="form__item">
@@ -75,7 +69,7 @@
 							<div class="form__input-area">
 								<div class="form__input">
 									<label class="form__label">Quantity</label>
-									<input type="text" name="quantity" placeholder="0">
+									<input type="text" name="quantity" placeholder="0" data-required="">
 								</div>
 								<div class="form__input">
 									<label class="form__label">Packaging type</label>
@@ -89,15 +83,15 @@
 								<div class="form__input-group">
 									<div class="form__input">
 										<label class="form__label">Length</label>
-										<input type="text" name="length" value="1000">
+										<input type="text" name="length" value="1000" data-required>
 									</div>
 									<div class="form__input">
 										<label class="form__label">Width</label>
-										<input type="text" name="width" value="1000">
+										<input type="text" name="width" value="1000" data-required>
 									</div>
 									<div class="form__input">
 										<label class="form__label">Height</label>
-										<input type="text" name="height" value="1000">
+										<input type="text" name="height" value="1000" data-required>
 									</div>
 									<div class="form__input">
 										<select name="form[]" class="form">
@@ -109,7 +103,7 @@
 								<div class="form__input-group">
 									<div class="form__input">
 										<label class="form__label">Width</label>
-										<input type="text" name="width" value="1000">
+										<input type="text" name="width" value="1000" data-required>
 									</div>
 									<div class="form__input">
 										<select name="form[]" class="form">
@@ -128,7 +122,7 @@
 											</div>
 										</div>
 									</label>
-									<select name="form[]" class="form">
+									<select name="form[]" class="form" data-required="select">
 										<option value="1" selected>I’m not sure</option>
 										<option value="2">Heavy class</option>
 										<option value="2">Middle class</option>
@@ -157,7 +151,7 @@
 									<div class="form__double-input">
 										<div class="form__input">
 											<label class="form__label">ZIP / Postal code</label>
-											<input type="text" name="postal-code">
+											<input type="text" name="postal-code" placeholder="_______________" data-required>
 										</div>
 										<div class="form__input">
 											<label class="form__label">
@@ -167,7 +161,7 @@
 													<div class="tip__content">Request pickup date</div>
 												</div>
 											</label>
-											<input type="text" name="loading-date" value="14.01.2000" data-date-mask>
+											<input type="text" name="loading-date" value="14.01.2000" data-date-mask data-required>
 											<img class="form__calendar" data-src="img/interface/calendar.svg" data-inline-svg="" alt="Loading date">
 										</div>
 									</div>
@@ -232,7 +226,7 @@
 									<div class="form__double-input">
 										<div class="form__input">
 											<label class="form__label">ZIP / Postal code</label>
-											<input type="text" name="postal-code">
+											<input type="text" name="postal-code" placeholder="_______________" data-required>
 										</div>
 									</div>
 									<div class="form__checkboxes">
@@ -286,6 +280,7 @@
 					</form>
 				</div>
 			</main>
+			@@include('html/_popup.htm', {})
 			@@include('html/_footer.htm',{})
 			@@include('html/_logo.htm',{})
 			@@include('html/_js.htm',{})

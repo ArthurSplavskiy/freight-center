@@ -43,7 +43,7 @@
 						</div>
 					</div>
 				</nav>
-				<section class="s-delivery">
+				<div class="s-delivery">
 					<div class="s-delivery__container">
 						<div class="s-delivery__content">
 							<div class="s-delivery__text">
@@ -55,78 +55,11 @@
 								</p>
 							</div>
 							<div class="s-delivery__form">
-								<form action="#" class="form form_delivery">
-									<fieldset class="form__item">
-										<h3 class="form__title">Pickup/delivery information</h3>
-										<div class="form__double-input">
-											<div class="form__input">
-												<label class="form__label">Pickup ZIP/Postal code</label>
-												<input type="text" name="postal-code-pickup">
-											</div>
-											<div class="form__input">
-												<label class="form__label">Destination ZIP/Postal code</label>
-												<input type="text" name="postal-code-destination">
-											</div>
-										</div>
-									</fieldset>
-									<fieldset class="form__item">
-										<h3 class="form__title">Shipment information</h3>
-										<div class="form__input-area">
-											<div class="form__input-group">
-												<div class="form__input">
-													<label class="form__label">Length</label>
-													<input type="text" name="length" value="1000">
-												</div>
-												<div class="form__input">
-													<label class="form__label">Width</label>
-													<input type="text" name="width" value="1000">
-												</div>
-												<div class="form__input">
-													<label class="form__label">Height</label>
-													<input type="text" name="height" value="1000">
-												</div>
-												<div class="form__input">
-													<select name="form[]" class="form">
-														<option value="1" selected>in</option>
-														<option value="2">feet</option>
-													</select>
-												</div>
-											</div>
-											<div class="form__input-group">
-												<div class="form__input">
-													<label class="form__label">Width</label>
-													<input type="text" name="width" value="1000">
-												</div>
-												<div class="form__input">
-													<select name="form[]" class="form">
-														<option value="1" selected>lbs</option>
-														<option value="2">kg</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</fieldset>
-									<fieldset class="form__item">
-										<h3 class="form__title">Do you know the freight class?</h3>
-										<div class="form__options options">
-											<label class="options__item">
-												<input hidden class="options__input" type="radio" value="1" name="option">
-												<span class="options__text">Yes</span>
-											</label>
-											<label class="options__item">
-												<input checked hidden class="options__input" type="radio" value="2" name="option">
-												<span class="options__text">No</span>
-											</label>
-										</div>
-									</fieldset>
-									<fieldset class="item-action">
-										<button class="button">View my rates</button>
-									</fieldset>
-								</form>
+								@@include('html/_delivery-form.htm', {})
 							</div>
 						</div>
 					</div>
-				</section>
+				</div>
 				<section class="s-map" style="background: #E6EDF0;">
 					<div class="s-map__container">
 						<div class="s-map__content">
@@ -492,6 +425,7 @@
 			</main>
 			@@include('html/_footer.htm',{})
 			@@include('html/_logo.htm',{})
+			@@include('html/_popup.htm', {})
 			@@include('html/_js.htm',{})
 		</div>
 	</body>

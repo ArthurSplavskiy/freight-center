@@ -10,41 +10,40 @@
         height: 100%;
         z-index: 9999;
         background-color: #fff;
-        transition: opacity 1.5s ease;
         pointer-events: none;
+		transition: transform 0.5s ease-out 1.3s;
+		font-size: 48px;
     }
 	.preloader-logo {
 		display: grid;
 		grid-template-columns: 60px 1fr;
 		align-items: center;
 		gap: 10px;
-		
 	}
-	.preloader-logo img {
+	.preloader-img {
 		transform: scale(0) rotate(-90deg);
 		transform-origin: center;
-		transition: all 1s ease-out;
+		transition: transform 0.8s ease-out;
+		max-width: 60px;
 	}
-	.preloader span {
-		font-size: 48px;
-	}
-	.preloader span > span {
+	.preloader-charwrap {
 		display: inline-block;
 		overflow: hidden;
 	}
-	.preloader span > span > span {
+	.preloader-char {
 		display: inline-block;
 		transform: translateX(-100%);
-		transition: all 1s ease-out;
+		transition: all 0.8s ease-out;
 	}
 	@media (max-width: 768px) {
 		.preloader-logo {
 			grid-template-columns: 40px 1fr;
 		}
-		.preloader-logo img {
-			transform: scale(2);
+		.preloader._animate .preloader-img {
+			transform: scale(1);
+			max-width: 40px;
 		}
-		.preloader span {
+		.preloader {
 			font-size: 28px;
 		}
 	}
@@ -53,14 +52,13 @@
 			display: none;
 		}
 	}
-	.preloader._animate .preloader-logo img {
-		transform: scale(3) rotate(0);
+	.preloader._animate .preloader-img {
+		transform: scale(1) rotate(0);
 	}
-	.preloader._animate span > span > span {
+	.preloader._animate .preloader-char {
 		transform: translateX(0);
 	}
 	.preloader._animate {
 		transform: translateY(-100%);
-		transition: all 0.5s ease-out 1.5s;
 	}
 </style>

@@ -100,96 +100,22 @@
 										<h2>Compare Carrier Rates</h2>
 										<p class="page-text">Compare Estes Forwarding Worldwide rates against <a href="#">other
 												carriers</a>.</p>
-										<span>If you're happy with your rate and carrier, you can book your shipment in about the same
+										<p class="page-text">If you're happy with your rate and carrier, you can book your shipment in about the same
 											amount of time it takes to book
-											a plane ticket.</span>
+											a plane ticket.</p>
 									</div>
 								</li>
 							</ul>
 							<img src="img/statistics.png" alt="Freight Center">
 						</div>
 					</div>
-					<form action="#" class="form form-quote">
-						<fieldset class="form-quote__heading">
-							<h2>EFW quote</h2>
-							<p>Enter your shipment information below to receive a <strong>free EFW quote</strong></p>
-						</fieldset>
-						<div class="form-quote__group">
-							<fieldset class="form__item">
-								<h3 class="form__title">Pickup/delivery information</h3>
-								<div class="form__double-input">
-									<div class="form__input">
-										<label class="form__label">Pickup Postal code</label>
-										<input type="text" name="postal-code-pickup">
-									</div>
-									<div class="form__input">
-										<label class="form__label">Destination Postal code</label>
-										<input type="text" name="postal-code-destination">
-									</div>
-								</div>
-							</fieldset>
-							<fieldset class="form__item">
-								<h3 class="form__title">Shipment information</h3>
-								<div class="form__input-area">
-									<div class="form__input-group">
-										<div class="form__input">
-											<label class="form__label">Length</label>
-											<input type="text" name="length" value="1000">
-										</div>
-										<div class="form__input">
-											<label class="form__label">Width</label>
-											<input type="text" name="width" value="1000">
-										</div>
-										<div class="form__input">
-											<label class="form__label">Height</label>
-											<input type="text" name="height" value="1000">
-										</div>
-										<div class="form__input">
-											<select name="form[]" class="form">
-												<option value="1" selected>in</option>
-												<option value="2">feet</option>
-											</select>
-										</div>
-									</div>
-									<div class="form__input-group">
-										<div class="form__input">
-											<label class="form__label">Width</label>
-											<input type="text" name="width" value="1000">
-										</div>
-										<div class="form__input">
-											<select name="form[]" class="form">
-												<option value="1" selected>lbs</option>
-												<option value="2">kg</option>
-											</select>
-										</div>
-									</div>
-								</div>
-							</fieldset>
-						</div>
-						<div class="form-quote__controls">
-							<fieldset class="form__item">
-								<h3 class="form__title">Do you know the freight class?</h3>
-								<div class="form__options options">
-									<label class="options__item">
-										<input hidden class="options__input" type="radio" value="1" name="option">
-										<span class="options__text">Yes</span>
-									</label>
-									<label class="options__item">
-										<input checked hidden class="options__input" type="radio" value="2" name="option">
-										<span class="options__text">No</span>
-									</label>
-								</div>
-							</fieldset>
-							<fieldset class="item-action">
-								<button class="button">Get my Quote</button>
-							</fieldset>
-						</div>
-					</form>
+					@@include('html/_quote-form.htm',{})
 				</div>
 
 			</main>
 			@@include('html/_footer.htm',{})
 			@@include('html/_logo.htm',{})
+			@@include('html/_popup.htm',{})
 			@@include('html/_js.htm',{})
 		</div>
 	</body>
